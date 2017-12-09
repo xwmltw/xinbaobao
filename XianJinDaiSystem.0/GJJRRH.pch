@@ -1,0 +1,33 @@
+//
+//  GJJRRH.pch
+//  RenRenhua2.0
+//
+//  Created by 葛佳佳 on 2016/10/31.
+//  Copyright © 2016年 chenchuanxi. All rights reserved.
+//
+
+#ifndef GJJRRH_pch
+#define GJJRRH_pch
+
+#import "HYBNetworking.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "YYModel.h"
+#import "GJJAPPMacro.h"
+#import "GJJAppUtils.h"
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD+Add.h"
+#import "UIColor+Hex.h"
+#import "UIView+XWMExtension.h"
+#import "TalkingData.h"
+#import "TalkingDataAppCpa.h"
+#import "XDeviceHelper.h"
+#import "XControllerViewHelper.h"
+#import "MJExtension.h"
+
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#endif /* GJJRRH_pch */

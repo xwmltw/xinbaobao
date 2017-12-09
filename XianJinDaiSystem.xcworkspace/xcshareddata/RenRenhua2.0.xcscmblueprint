@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6db413f7-9776-3143-9837-b21b9fcb783e++1971",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "6db413f7-9776-3143-9837-b21b9fcb783e++1971" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6db413f7-9776-3143-9837-b21b9fcb783e++1971" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E1E5E5D3-C5BE-4DB9-A30D-0486AA7CD0B7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6db413f7-9776-3143-9837-b21b9fcb783e++1971" : "Xianjindai01\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RenRenhua2.0",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RenRenhua2.0.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.211\/svn\/yuecai",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6db413f7-9776-3143-9837-b21b9fcb783e++1971"
+    }
+  ]
+}
