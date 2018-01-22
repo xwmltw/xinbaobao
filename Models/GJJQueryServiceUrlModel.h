@@ -33,7 +33,7 @@
 //新增功能开关2个：用户登录后弹窗引导用户跳出应用下载/调起第三方应用（贷款超市）
 //用户提交申请失败/被拒弹窗引导下载/调起第三方应用（贷款超市）
 //1开0关
-@property (nonatomic, copy) NSNumber *switch_on_off_3;
+@property (nonatomic, copy) NSNumber *switch_on_off_3;//1开0关
 
 @property (nonatomic, copy) NSString *switch_on_off_3_url;
 + (instancetype)sharedInstance;

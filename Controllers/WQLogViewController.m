@@ -116,20 +116,9 @@ typedef NS_ENUM(NSInteger,WQLogInRequest){
         
         [self saveSeccionWithUser:user];
         
-        if ([GJJQueryServiceUrlModel sharedInstance].switch_on_off_3.integerValue == 1 ) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多贷款产品" message:@"是否进入全网贷超市" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url]];
-            }];
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [self.navigationController popToViewController:self.popViewController animated:YES];
-            }];
-            [alert addAction:ok];
-            [alert addAction:cancel];
-            [self presentViewController:alert animated:NO completion:nil];
-        }else{
-            [self.navigationController popToViewController:self.popViewController animated:YES];
-        }
+        
+        [self.navigationController popToViewController:self.popViewController animated:YES];
+        XBlockExec(self.block,nil);
         
     }else if(self.requestCount == WQQuickGetValiCodeFromPhone){
         _dict = dict;
@@ -160,7 +149,9 @@ typedef NS_ENUM(NSInteger,WQLogInRequest){
                                                       @"uuid":dict[@"uuid"]       
                                                              }];
         [self saveSeccionWithUser:user];
+        
         [self.navigationController popToViewController:self.popViewController animated:YES];
+        XBlockExec(self.block,nil);
     }
 }
 

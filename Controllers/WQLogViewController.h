@@ -12,5 +12,6 @@
 
 @property(nonatomic,strong)UIViewController *popViewController;
 
+@property (nonatomic, copy) XBlock block;
 
 @end

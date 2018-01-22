@@ -2614,7 +2614,7 @@
 					"$(PROJECT_DIR)/OCR",
 					"$(PROJECT_DIR)/TalkingData",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xbb.xinbaobao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xbb.youshidai2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2654,10 +2654,10 @@
 					"$(PROJECT_DIR)/OCR",
 					"$(PROJECT_DIR)/TalkingData",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xbb.xinbaobao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xbb.youshidai2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3907fa6-d9e0-4028-a682-2ebd12c63b7d";
-				PROVISIONING_PROFILE_SPECIFIER = xinbaobao_dis;
+				PROVISIONING_PROFILE = "fd9c4432-479c-4cb0-b061-8e03cb3b596b";
+				PROVISIONING_PROFILE_SPECIFIER = youshidai_dis;
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};

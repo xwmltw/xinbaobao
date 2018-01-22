@@ -13,7 +13,7 @@
 NSString *CCXSERVR = @"";
 NSString *GJJSIGNCONTRACTSUCCESS = @"signContractSuccess";
 NSString *GJJCloseADImageH5 = @"closeADImageH5";
-NSString* const APPDEFAULTNAME = @"信宝宝";
+NSString* const APPDEFAULTNAME = @"优时贷";
 NSString* const ALZMAPPID = @"300000041";//2017021705712966
 NSString* const ZFBSCHEME = @"youshidaiPay";//
 

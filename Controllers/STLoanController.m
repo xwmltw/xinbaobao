@@ -987,6 +987,20 @@ GJJShowNoticeGuideViewDelegate>
     loginVC.hidesBottomBarWhenPushed = YES;
     loginVC.title = @"登录";
     loginVC.popViewController = self;
+    loginVC.block = ^(id result) {
+        if ([GJJQueryServiceUrlModel sharedInstance].switch_on_off_3.integerValue == 1 ) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多贷款产品" message:@"是否进入全网贷超市" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url]];
+//                NSLog(@"%@",[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url);
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [alert addAction:ok];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:NO completion:nil];
+        }
+    };
     [self.navigationController pushViewController:loginVC animated:YES];
 }
 /**
@@ -1007,6 +1021,20 @@ GJJShowNoticeGuideViewDelegate>
         loginVC.title = @"登录";
         loginVC.popViewController = self;
         loginVC.hidesBottomBarWhenPushed = YES;
+        loginVC.block = ^(id result) {
+            if ([GJJQueryServiceUrlModel sharedInstance].switch_on_off_3.integerValue == 1 ) {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多贷款产品" message:@"是否进入全网贷超市" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url]];
+                    //                NSLog(@"%@",[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url);
+                }];
+                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                }];
+                [alert addAction:ok];
+                [alert addAction:cancel];
+                [self presentViewController:alert animated:NO completion:nil];
+            }
+        };
         [self.navigationController pushViewController:loginVC animated:YES];
     }
 }

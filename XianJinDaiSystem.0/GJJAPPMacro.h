@@ -136,7 +136,7 @@ static NSString *const TD_AdTrackingID =     @"";
 #define CCXService @"http://app.usdai.com/queryServiceUrl"//正式环境
 #define CCXABOUT @"http://zfb.usdai.com/about5.html"//关于
 #define CCXQUESTION @"http://zfb.usdai.com/question.html"// 常见问题
-#define CCXContract @"http://zfb.usdai.com/zcxy2.html?company=6"//注册协议
+#define CCXContract @"http://zfb.usdai.com/zcxy2.html?company=1"//注册协议
 #endif
 
 

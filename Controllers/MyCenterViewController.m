@@ -108,7 +108,7 @@ typedef NS_ENUM(NSInteger, CCXMyCenterRequest) {
 - (void)setData{
      NSInteger OnOff = [GJJQueryServiceUrlModel sharedInstance].switch_on_off_2.integerValue;
     if (OnOff) {
-        NSArray *nameArr = @[@"我的账单",@"快速还款",@"修改密码",@"关于信宝宝",@"常见问题",@"我要反馈",@"退出账号"];
+        NSArray *nameArr = @[@"我的账单",@"快速还款",@"修改密码",@"关于优时贷",@"常见问题",@"我要反馈",@"退出账号"];
         NSArray *imageArr =@[@"mine_icon_info",@"mine_icon_bill",@"mine_icon_quickpay",@"mine_icon_modify",@"mine_icon_aboutus",@"mine_icon_question",@"mine_icon_feedback"];
         [nameArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSDictionary *dic = @{@"title":obj,@"imageName":imageArr[idx]};
@@ -720,7 +720,7 @@ typedef NS_ENUM(NSInteger, CCXMyCenterRequest) {
                 return;
             }
             CCXRootWebViewController *rooVC = [CCXRootWebViewController new];
-            rooVC.title = @"关于信宝宝";
+            rooVC.title = @"关于优时贷";
             rooVC.url = CCXABOUT;
             rooVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:rooVC animated:YES];
@@ -820,6 +820,20 @@ typedef NS_ENUM(NSInteger, CCXMyCenterRequest) {
     loginVC.hidesBottomBarWhenPushed = YES;
     loginVC.title = @"登录";
     loginVC.popViewController = self;
+    loginVC.block = ^(id result) {
+        if ([GJJQueryServiceUrlModel sharedInstance].switch_on_off_3.integerValue == 1 ) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多贷款产品" message:@"是否进入全网贷超市" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url]];
+                //                NSLog(@"%@",[GJJQueryServiceUrlModel sharedInstance].switch_on_off_3_url);
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [alert addAction:ok];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:NO completion:nil];
+        }
+    };
     [self.navigationController pushViewController:loginVC animated:YES];
 }
 -(void)pushToModifiyController{
